@@ -1,0 +1,40 @@
+
+<div class="flex flex-col items-center justify-center h-full text-center animate-fade-in">
+  <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+    Key <span class="text-cyan-400">Takeaways</span>
+  </h1>
+  <p class="text-xl text-slate-300 max-w-3xl mb-8">
+    The Facade is not just a pattern; it's a strategy for managing complexity and building scalable, maintainable Angular applications.
+  </p>
+  
+  <div class="text-left max-w-2xl w-full bg-slate-900/50 p-6 rounded-lg border border-slate-700 space-y-4">
+    <div>
+      <h3 class="text-lg font-semibold text-emerald-400">✓ Use a Facade when:</h3>
+      <ul class="list-disc list-inside text-slate-300 mt-2">
+        <li>A component starts depending on many services.</li>
+        <li>You want to simplify a complex subsystem.</li>
+        <li>You need to decouple your components from underlying APIs or state management.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-rose-400">✗ Avoid a Facade when:</h3>
+      <ul class="list-disc list-inside text-slate-300 mt-2">
+        <li>The interaction is already very simple (e.g., calling one method on one service).</li>
+        <li>You need direct, fine-grained control over the underlying services from the component.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="mt-12 text-2xl font-bold text-slate-200">
+    Thank You!
+  </p>
+</div>
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.7s ease-out forwards;
+  }
+</style>

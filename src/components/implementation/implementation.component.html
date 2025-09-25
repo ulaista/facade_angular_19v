@@ -1,0 +1,41 @@
+
+<div class="animate-fade-in">
+  <h2 class="text-3xl font-bold mb-6 text-cyan-400">Implementation: Before & After</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- BEFORE -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-2 text-rose-400">Before Facade</h3>
+      <p class="text-slate-400 mb-4">A component directly managing multiple services.</p>
+      <pre class="bg-slate-900 text-sm rounded-lg p-4 overflow-x-auto h-96"><code class="language-typescript text-slate-300">{{ beforeCode }}</code></pre>
+    </div>
+
+    <!-- AFTER -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-2 text-emerald-400">After Facade</h3>
+      <p class="text-slate-400 mb-4">A dedicated Facade service simplifies the component.</p>
+      <div class="space-y-4">
+        <details class="bg-slate-900 rounded-lg p-4" open>
+          <summary class="font-semibold text-cyan-300 cursor-pointer">The Facade (user-session.facade.ts)</summary>
+          <pre class="text-sm overflow-x-auto mt-2"><code class="language-typescript text-slate-300">{{ afterFacadeCode }}</code></pre>
+        </details>
+        <details class="bg-slate-900 rounded-lg p-4" open>
+          <summary class="font-semibold text-emerald-300 cursor-pointer">The Component (profile.component.ts)</summary>
+          <pre class="text-sm overflow-x-auto mt-2"><code class="language-typescript text-slate-300">{{ afterComponentCode }}</code></pre>
+        </details>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in forwards;
+  }
+  pre {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1e293b;
+  }
+</style>

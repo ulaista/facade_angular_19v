@@ -1,0 +1,62 @@
+
+<div class="flex flex-col items-center justify-center h-full text-center animate-fade-in">
+  <h1 class="text-4xl md:text-5xl font-extrabold mb-8">
+    <span class="text-cyan-400">Further Reading</span> & Resources
+  </h1>
+  <p class="text-xl text-slate-300 max-w-3xl mb-10">
+    Continue your learning journey with these hand-picked articles and official documentation.
+  </p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full text-left">
+    
+    <a href="https://en.wikipedia.org/wiki/Facade_pattern" target="_blank" rel="noopener noreferrer"
+       class="block bg-slate-900/50 p-6 rounded-lg border border-slate-700 hover:border-cyan-400 hover:bg-slate-800 transition-all group">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-5.747h18" /></svg>
+        Facade Pattern - Wikipedia
+      </h3>
+      <p class="text-slate-300 group-hover:text-white">The original definition from the "Gang of Four" book. A great starting point for the theory.</p>
+      <span class="text-sm text-cyan-500 mt-4 inline-block">Read More →</span>
+    </a>
+
+    <a href="https://angular.io/guide/dependency-injection" target="_blank" rel="noopener noreferrer"
+       class="block bg-slate-900/50 p-6 rounded-lg border border-slate-700 hover:border-cyan-400 hover:bg-slate-800 transition-all group">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+        Angular Docs: Dependency Injection
+      </h3>
+      <p class="text-slate-300 group-hover:text-white">Understand the core concept that makes Facades and other service-based patterns possible in Angular.</p>
+       <span class="text-sm text-cyan-500 mt-4 inline-block">Read More →</span>
+    </a>
+    
+    <a href="https://medium.com/itnext/the-facade-pattern-in-angular-ccb1e605d336" target="_blank" rel="noopener noreferrer"
+       class="block bg-slate-900/50 p-6 rounded-lg border border-slate-700 hover:border-cyan-400 hover:bg-slate-800 transition-all group">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+        Facade Pattern in Angular (Article)
+      </h3>
+      <p class="text-slate-300 group-hover:text-white">A practical article showing concrete examples of implementing the Facade pattern within an Angular application.</p>
+       <span class="text-sm text-cyan-500 mt-4 inline-block">Read More →</span>
+    </a>
+    
+    <a href="https://en.wikipedia.org/wiki/SOLID" target="_blank" rel="noopener noreferrer"
+       class="block bg-slate-900/50 p-6 rounded-lg border border-slate-700 hover:border-cyan-400 hover:bg-slate-800 transition-all group">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+        SOLID Principles
+      </h3>
+      <p class="text-slate-300 group-hover:text-white">The Facade pattern helps adhere to the Single Responsibility Principle (SRP) and Dependency Inversion Principle (DIP).</p>
+       <span class="text-sm text-cyan-500 mt-4 inline-block">Read More →</span>
+    </a>
+
+  </div>
+</div>
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.7s ease-out forwards;
+  }
+</style>

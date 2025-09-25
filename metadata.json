@@ -1,0 +1,5 @@
+{
+  "name": "Angular Facade Pattern Presentation",
+  "description": "An interactive presentation application that explains the Facade design pattern within the context of an Angular application, following SOLID principles.",
+  "requestFramePermissions": []
+}

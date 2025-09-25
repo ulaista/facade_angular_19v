@@ -1,0 +1,63 @@
+
+<div class="animate-fade-in flex flex-col items-center justify-center h-full">
+  <h2 class="text-3xl font-bold mb-4 text-amber-400">Pop Quiz: To Facade or Not to Facade?</h2>
+  <p class="text-slate-300 mb-6 max-w-3xl text-center">
+    Look at the component below. It fetches order details by coordinating several services. Is this component a good candidate for refactoring to use a Facade?
+  </p>
+
+  <div class="w-full max-w-3xl bg-slate-900 rounded-lg p-4 border border-slate-700 mb-6">
+    <pre class="text-sm overflow-x-auto"><code class="language-typescript text-slate-300">{{ scenarioCode }}</code></pre>
+  </div>
+
+  @if (!answered()) {
+    <div class="flex gap-4">
+      <button (click)="selectAnswer(true)" class="px-8 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow-md hover:bg-emerald-500 transition-all transform hover:scale-105">
+        ✓ Yes, use a Facade
+      </button>
+      <button (click)="selectAnswer(false)" class="px-8 py-3 bg-rose-600 text-white font-semibold rounded-lg shadow-md hover:bg-rose-500 transition-all transform hover:scale-105">
+        ✗ No, inject services directly
+      </button>
+    </div>
+  }
+
+  @if (answered()) {
+    <div class="w-full max-w-3xl mt-4 animate-pop-in">
+      @if (correct()) {
+        <div class="bg-emerald-900/50 border border-emerald-500 text-emerald-200 rounded-lg p-6">
+          <h3 class="text-2xl font-bold text-emerald-400 mb-2">You got it!</h3>
+          <p>{{ correctReason }}</p>
+        </div>
+      } @else {
+        <div class="bg-rose-900/50 border border-rose-500 text-rose-200 rounded-lg p-6">
+          <h3 class="text-2xl font-bold text-rose-400 mb-2">Good Try!</h3>
+          <p>{{ incorrectReason }}</p>
+        </div>
+      }
+      <div class="text-center mt-6">
+          <button (click)="reset()" class="text-cyan-400 hover:text-cyan-300 transition-colors">Try Again</button>
+      </div>
+    </div>
+  }
+
+</div>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+  @keyframes pop-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-pop-in {
+    animation: pop-in 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  pre {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1e293b;
+  }
+</style>

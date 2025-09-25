@@ -1,0 +1,36 @@
+
+<div class="animate-fade-in flex flex-col items-center justify-center h-full">
+  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-amber-400">Key Benefits</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+    
+    <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-700">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2">Decoupling</h3>
+      <p class="text-slate-300">Components are shielded from the complexities of the subsystem. You can refactor the underlying services without touching any components, as long as the Facade's public API remains the same.</p>
+    </div>
+
+    <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-700">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2">Simplicity & Readability</h3>
+      <p class="text-slate-300">Component logic becomes cleaner and more focused on the presentation layer. Business logic is centralized in the Facade, making the codebase easier to understand and reason about.</p>
+    </div>
+
+    <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-700">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2">Improved Testability</h3>
+      <p class="text-slate-300">When testing a component, you only need to mock a single Facade instead of multiple individual services. This drastically simplifies test setup and maintenance.</p>
+    </div>
+
+    <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-700">
+      <h3 class="text-xl font-semibold text-cyan-400 mb-2">Centralized Logic</h3>
+      <p class="text-slate-300">Provides a single place to manage complex interactions, state, and caching strategies related to a specific domain, preventing logic duplication across multiple components.</p>
+    </div>
+
+  </div>
+</div>
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+</style>

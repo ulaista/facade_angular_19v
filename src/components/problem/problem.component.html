@@ -1,0 +1,51 @@
+
+<div class="animate-fade-in">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6 text-rose-400">The Problem: Tangled Dependencies</h2>
+  <p class="text-lg text-slate-300 mb-8 max-w-4xl">
+    Imagine a component that needs to manage a user's session. It might need to interact with multiple services for authentication, data fetching, and logging. This creates tight coupling and makes the component complex.
+  </p>
+
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8 p-6 bg-slate-900/50 rounded-lg border border-slate-700">
+    <div class="p-6 rounded-lg bg-rose-500/20 border border-rose-500 text-center">
+      <h3 class="text-xl font-bold text-white">MyComponent</h3>
+      <p class="text-rose-200">Knows too much!</p>
+    </div>
+
+    <div class="text-4xl text-slate-500 transform rotate-90 md:rotate-0">→</div>
+
+    <div class="flex flex-col gap-4 text-center">
+      <div class="p-3 rounded-md bg-slate-700">
+        <p class="font-mono text-cyan-300">AuthService</p>
+      </div>
+      <div class="p-3 rounded-md bg-slate-700">
+        <p class="font-mono text-cyan-300">UserProfileService</p>
+      </div>
+      <div class="p-3 rounded-md bg-slate-700">
+        <p class="font-mono text-cyan-300">AnalyticsService</p>
+      </div>
+      <div class="p-3 rounded-md bg-slate-700">
+        <p class="font-mono text-cyan-300">ErrorLoggingService</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 p-4 bg-slate-900 rounded-lg">
+    <h3 class="text-xl font-semibold text-slate-300 mb-2">Consequences:</h3>
+    <ul class="list-disc list-inside text-slate-400 space-y-2">
+      <li><strong class="text-rose-400">High Complexity:</strong> The component has to coordinate calls between all services.</li>
+      <li><strong class="text-rose-400">Poor Readability:</strong> Business logic is mixed with low-level service interactions.</li>
+      <li><strong class="text-rose-400">Difficult to Test:</strong> You need to mock multiple dependencies to test the component.</li>
+      <li><strong class="text-rose-400">Brittle:</strong> Changing one service might require changes in every component that uses it.</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in forwards;
+  }
+</style>
